@@ -20,8 +20,8 @@ SCHEMA='
     {"name": "vByName", "propertyKeys": ["name"], "composite": true, "unique": true},
     {"name": "vByAge", "propertyKeys": ["age"], "composite": true, "unique": false},
     {"name": "vByGender", "propertyKeys": ["gender"], "composite": true, "unique": false},
-    {"name": "vByMovie", "propertyKeys": ["movie"], "composite": true, "unique": false},
-    {"name": "vByTv_show", "propertyKeys": ["tv_show"], "composite": true, "unique": false}
+    {"name": "vByMovies_in", "propertyKeys": ["movie"], "composite": true, "unique": false},
+    {"name": "vByTv_show_in", "propertyKeys": ["tv_show"], "composite": true, "unique": false}
   ],
   "edgeIndexes" :[
     {"name": "eByGender", "propertyKeys": ["gender"], "composite": true, "unique": false}

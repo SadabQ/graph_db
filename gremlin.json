@@ -1,0 +1,44 @@
+{
+  "gremlin": "
+  
+  def jennifer =  graph.addVertex(T.label, 'person', 'name', 'Jennifer Aniston', 'gender', 'Female');
+  def office_space = graph.addVertex(T.label, 'movie', 'movie', 'Office Space');
+  def friends = graph.addVertex(T.label, 'tv_show', 'tv_show', 'Friends');
+  def arnold =  graph.addVertex(T.label, 'person', 'name', 'Arnold Schwarzenegger');
+  def terminator = graph.addVertex(T.label, 'movie', 'movie', 'The Terminator');
+  def ron =  graph.addVertex(T.label, 'person', 'name', 'Ron Livingston'); #Office Space
+  def linda = graph.addVertex(T.label, 'person', 'name', 'Linda Hamilton'); #The Terminator
+  def steve =  graph.addVertex(T.label, 'person', 'name', 'Steve Carell');
+  def the_office = graph.addVertex(T.label, 'tv_show', 'tv_show', 'The Office');
+
+
+  jennifer.addEdge('movie', office_space);
+  jennifer.addEdge('tv_show', friends);
+  arnold.addEdge('movie', terminator);
+  ron.addEdge('movie', office_space);
+  linda.addEdge('movie', terminator);
+  steve.addEdge('tv_show', the_office);
+
+
+
+
+  david.addEdge('tweets', browniesTweet);
+  browniesTweet.addEdge('hashes', bakingHashtag);
+  browniesTweet.addEdge('mentions', joseph);
+  joseph.addEdge('favorites', browniesTweet, 'time', '10:30PM EST');
+  joseph.addEdge('tweets', graphTweet);
+  graphTweet.addEdge('hashes', bluemixHashtag);
+  kim.addEdge('favorites', graphTweet, 'time', '4:29AM EST');
+  kim.addEdge('favorites', graphTweet, 'time', '12:21AM EST');
+  kamal.addEdge('favorites', dancingTweet, 'time', '9:17PM EST');
+  kamal.addEdge('tweets', soccerTweet);
+  prachi.addEdge('tweets', dancingTweet);
+  dancingTweet.addEdge('hashes', dancingHashtag);
+  dancingTweet.addEdge('hashes', exerciseHashtag);
+  soccerTweet.addEdge('hashes', exerciseHashtag);
+  keith.addEdge('tweets', beerTweet);
+  beerTweet.addEdge('mentions', matt);
+  beerTweet.addEdge('hashes', deliciousHashtag);
+  kamal.addEdge('favorites', graphTweet, 'time', '5:22PM UTC');
+  "
+}
